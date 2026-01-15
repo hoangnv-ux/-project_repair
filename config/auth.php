@@ -46,12 +46,12 @@ return [
             'hash' => false,
         ],
         'user' => [
-            'driver' => 'jwt',
+            'driver' => 'session',
             'provider' => 'users',
             'hash' => false,
         ],
         'admin' => [
-            'driver' => 'jwt',
+            'driver' => 'session',
             'provider' => 'admins',
             'hash' => false,
         ],

@@ -1,0 +1,63 @@
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+.env
+.env.testing
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/auth.json
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+
+# IDE and Editor settings
+/.idea
+/.vscode
+/.nova
+/.zed
+/.fleet
+/.phpstorm
+
+# OS specific files/folders
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+
+# Laravel's logs, caches, and other temporary files
+/storage/logs
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views
+/storage/debugbar
+
+# Composer vendor directory (when installed globally)
+composer.phar
+composer.lock
+
+# Temporary files
+*.log
+*.lock
+*.bak
+*.swp
+*.swo
+

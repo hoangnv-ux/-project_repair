@@ -1,0 +1,142 @@
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.flex {
+    display: flex;
+}
+.page-content {
+    padding: 30px;
+    position: relative;
+}
+.navbar-header {
+    border-bottom: 1px solid #e9e9e9;
+}
+.menu-logo {
+    font-size: 30px;
+    font-weight: 600;
+}
+table {
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+table thead {
+    color: #ffffff;
+    background-color: #1e64c8;
+}
+table th {
+    border: 1px solid #ccc;
+}
+.va-typography-block table td {
+    vertical-align: middle;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.va-button__content {
+    font-weight: 400;
+}
+.va-icon {
+    font-size: 15px !important;
+}
+.va-typography-block table th {
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.flex-none {
+    flex: none !important;
+}
+/* custom style */
+.auth-form {
+    padding: 50px;
+    border-radius: 8px;
+    border: 1px solid #b7b7b7;
+}
+.auth-form  .title-form {
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.create-form {
+    max-width: 600px;
+}
+.create-form input,
+.create-form select {
+    width: 100%;
+}
+.va-sidebar-toggle {
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: absolute !important;
+}
+.navbar-header {
+    height: 70px;
+}
+.header-content {
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e9e9e9;
+}
+.header-title {
+    font-size: 30px;
+}
+.header-action {
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-action-group {
+    display: flex;
+    margin-top: 50px;
+}
+.flex-center {
+    align-items: center;
+}
+.flex-center-between {
+    align-items: center;
+    justify-content: space-between;
+}
+.icon-user {
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    padding: 5px 6px;
+}
+.va-sidebar-item-content i {
+    min-width: 24px;
+}
+.menu-minimized i {
+    min-width: unset;
+}
+.sidebar-title-item {
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar-title-item .va-sidebar-item-content {
+    width: 100%;
+}
+.menu-minimized {
+    justify-content: center;
+}

@@ -41,16 +41,7 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        $credentials = $request->only('email', 'password');
-        $credentials['is_active'] = true;
 
-        // Attempt to generate the JWT token
-        if (!$token = auth('user')->attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
-
-        // Return the generated JWT token
-        return $this->respondWithToken($token, 'user');
     }
 
     /**
@@ -70,9 +61,7 @@ class AuthController extends Controller
      */
     public function logout()
     {
-        auth('user')->logout();
 
-        return response()->json(['message' => 'Successfully logged out']);
     }
 
     /**

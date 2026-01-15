@@ -25,7 +25,7 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-
+        dd('login admin vao day');
     }
 
     public function logout()

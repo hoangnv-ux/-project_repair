@@ -41,7 +41,13 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        dd("login user vao day");
+        $credentials = $request->only('email','password');
+        $credentials['is_active'] = false;
+
+        if(!auth()->guard('user')->attempt(($credentials))){
+            return back()->withErrors(['message'=>'ivalid credentials']);
+        }
+        return redirect()->route('user.dashboard');
     }
 
     /**
@@ -59,9 +65,13 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function logout()
+    public function logout(Request $request)
     {
+        Auth::guard('user')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
+        return redirect()->route('user.login');
     }
 
     /**

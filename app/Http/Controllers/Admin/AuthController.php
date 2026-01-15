@@ -25,12 +25,21 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        dd('login admin vao day');
+        $credentials = $request->only('email','password');
+        if(!auth()->guard('admin')->attempt($credentials)){
+            return back()->withErrors(['message' => 'invalid credentials']);
+        }
+        $request->session()->regenerate();
+
+        return redirect()->route('admin.dashboard');
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
-
+        Auth::guard('admin')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('admin.login');
     }
 
 }

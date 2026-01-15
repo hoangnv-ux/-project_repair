@@ -14,6 +14,7 @@
     </div>
     <div class="card">
         <div class="card-body login-card-body">
+            {{-- buoc2 gan name router user ->authcontroller --}}
             <form action="{{ route('user.login') }}" method="post">
                 @csrf
                 <div class="input-group mb-3">
